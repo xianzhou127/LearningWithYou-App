@@ -32,11 +32,24 @@
 
 ## 来源只读与独立性
 
-867 个来源已跟踪/未忽略文件的 SHA256、Git 状态、HEAD 和 `.git/config` 与提取前一致。127 个提取的业务/资源/测试文件在仅规范记录的引用与 Next lint 注释调整后逐字一致。ASR 错误类单独抽取，来源与变化见 PROVENANCE。
+867 个来源已跟踪/未忽略文件的 SHA256、Git 状态、HEAD 和 `.git/config` 与提取前一致。127 个提取的业务/资源/测试文件在仅规范记录的引用、Next lint 注释及末尾空白调整后内容一致。ASR 错误类单独抽取，来源与变化见 PROVENANCE。
 
 暂存文件经过路径、普通文件/链接及凭据模式扫描，并人工检查清单；只含代码、锁文件、文档和生成的合成页面截图。未包含用户数据、环境密钥、音频、实际资料截图、产物或来源 .git。运行/构建脚本没有来源绝对路径、跨仓库链接或 file: 依赖。
 
-干净提交检出与 GitHub 远端核验尚待执行。GitHub CLI 已通过官方发布 SHA256 校验取得，`gh auth status` 当前显示未登录；没有创建仓库或上传。
+## 干净检出验证
+
+从初始提交 `0d9e60b8c5eff75dfe678e151adb2cbc1e44b3b2` 使用 `git clone --no-hardlinks` 建立全新 C 盘检出；更新到 `6bae779dd78b9e3b97b6a67523f41badcacb3afc`（仅新增 lint 忽略本地 pnpm 存储）。没有复制原项目或新工作区的 node_modules、dist、release、配置、环境文件。
+
+- `pnpm install --frozen-lockfile --store-dir .pnpm-store --package-import-method copy`：通过，使用该检出自己的全新内容存储，23 个直接运行/开发依赖真实路径全部在检出目录内。
+- 按 README 执行 `pnpm check`：类型、无警告 lint、172/172 测试通过；新增 ignore 后 lint 再次通过。
+- `pnpm package`：从源码重新编译 C#、生产 bundle 和 Windows x64 便携包，383 项资源及原生依赖检查通过。
+- 该检出生成的真实 EXE 再执行 `test:package`、`test:windows`、`test:appearance`：全部通过，零主进程/渲染异常；配置/加密/迁移/重启、窗口、玻璃调参恢复与资源释放结果与主工作区一致。
+- `test:glass`：该检出自己的 Electron/依赖完成全部 GPU 合成检查；未进行真实背景视觉验收。
+- 检查后 `git status --short` 为空；玻璃许可证与两个内置预设在 Git 检出后仍与来源字节相同。之后仅追加验证/状态文档，不修改已验证运行代码。
+
+## GitHub
+
+GitHub CLI 已通过官方发布 SHA256 校验取得，`gh auth status` 显示未登录。所有可独立完成的本地工作已完成，当前只等待用户登录后新建 Private 仓库、推送并核验远端；没有创建公网部署、npm 发布或二进制 Release。
 
 ## 仍需人工/真实服务验收
 
