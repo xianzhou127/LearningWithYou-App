@@ -1,0 +1,16 @@
+.configuration-profile { display: flex; flex-direction: column; align-items: stretch; gap: var(--s3); padding: 0 0 var(--s5); margin: 0 0 var(--s5); border-bottom: 1px solid var(--line); }
+.configuration-profile > button { align-self: flex-start; }
+.configuration-picker { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: var(--s2); }
+.configuration-profile-info { overflow-wrap: anywhere; }
+.configuration-test { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s3); scroll-margin-block: var(--s3); }
+.configuration-test-notice { align-self: stretch; padding: var(--s3); border: 1px solid var(--line); border-radius: var(--radius); background: var(--layer); color: var(--ink); font-size: var(--text-meta); overflow-wrap: anywhere; }
+.configuration-test-notice p { margin: 0; }
+.configuration-test-notice p + p, .configuration-test-notice button { margin-top: var(--s2); }
+.configuration-test .error { align-self: stretch; margin: 0; padding: var(--s3); border-radius: var(--radius); background: var(--error-bg); overflow-wrap: anywhere; }
+.configuration-dialog { width: min(520px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow-y: auto; margin: auto; padding: var(--s5); border: 1px solid var(--surface-edge); border-radius: var(--window-radius); background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+.configuration-dialog::backdrop { background: var(--backdrop); }
+.configuration-dialog-heading { display: flex; align-items: center; justify-content: space-between; gap: var(--s3); margin-bottom: var(--s4); }
+.configuration-dialog-heading h2 { margin: 0; }
+.configuration-dialog-heading button { flex: none; width: 30px; min-height: 30px; padding: 0; font-size: 20px; }
+.configuration-dialog :is(.fine, .error) { overflow-wrap: anywhere; }
+.configuration-dialog .error { padding: var(--s3); border-radius: var(--radius); background: var(--error-bg); }

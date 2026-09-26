@@ -1,0 +1,16 @@
+node_modules/
+dist/
+release/
+artifacts/
+.local/
+.pnpm-store/
+.env*
+!.env.example
+*.tsbuildinfo
+*.log
+*.encrypted
+user-data/
+secure-config/
+history-v1/
+appearance-v1/
+runtime/

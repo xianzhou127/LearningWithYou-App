@@ -1,0 +1,53 @@
+{
+  "name": "learning-with-you-app",
+  "version": "0.16.4",
+  "private": true,
+  "description": "本地桌面自我解释学习助手",
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=24.18.0 <25"
+  },
+  "scripts": {
+    "dev": "pnpm build && pnpm start",
+    "start": "electron dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "test": "node --import tsx --test --test-concurrency=1 desktop/tests/*.test.ts desktop/tests/glass/*.test.ts tests/*.test.ts tests/*.check.tsx",
+    "check": "pnpm typecheck && pnpm lint && pnpm test",
+    "build": "node scripts/build-desktop.mjs",
+    "package": "pnpm typecheck && pnpm build && node scripts/package-desktop.mjs",
+    "test:package": "node scripts/verify-package.mjs",
+    "test:windows": "node scripts/verify-windows.mjs",
+    "test:glass": "node scripts/verify-glass.mjs",
+    "test:appearance": "node scripts/verify-appearance.mjs",
+    "screenshots": "node scripts/verify-appearance.mjs --screenshots"
+  },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-markdown": "10.1.0",
+    "rehype-katex": "7.0.1",
+    "remark-gfm": "4.0.1",
+    "remark-math": "6.0.0",
+    "sharp": "0.35.4",
+    "ws": "8.21.3"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "@types/node": "20.19.43",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "@types/react-test-renderer": "19.1.0",
+    "@types/ws": "8.18.1",
+    "electron": "44.3.0",
+    "esbuild": "0.28.2",
+    "eslint": "9.39.5",
+    "react-test-renderer": "19.2.8",
+    "tsx": "4.23.12",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.68.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "playwright": "1.58.2"
+  }
+}

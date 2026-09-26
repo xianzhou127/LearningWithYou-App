@@ -1,0 +1,844 @@
+{
+  "extractedAt": "2026-09-26T04:37:26.262Z",
+  "sourceRepository": "LearningWithYou",
+  "sourceHead": "e4510f52dabf0e2cf64b0bbf92d158de735e5518",
+  "sourceHeadDate": "2026-09-24T17:46:57+08:00",
+  "sourceHeadAuthor": "Codex <codex@local>",
+  "workingTreeVersion": "0.16.4 (uncommitted candidate)",
+  "files": [
+    {
+      "source": "desktop/main.ts",
+      "destination": "desktop/main.ts",
+      "sourceSha256": "230d07ec45060010c8c2a89b3b5ce6ed68147b4ff5e9ae408dc306c986fae327",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/glass/menu-geometry.ts",
+      "destination": "desktop/glass/menu-geometry.ts",
+      "sourceSha256": "4a5d5ab59243ec46d99b0817b41b52dd4c69ccbb08da1bfcc009565a6efaf457",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/contract.ts",
+      "destination": "desktop/glass/contract.ts",
+      "sourceSha256": "1039e88213e0b9c51b59aded984544fc4490734fd0b6cef7a0adf77343f23605",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/material-settings.ts",
+      "destination": "desktop/glass/material-settings.ts",
+      "sourceSha256": "672297e6dd3077d431c6e4ea8c1b02e1b5ef994bb0ba6d92e70b97d3724d1968",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/motion.ts",
+      "destination": "desktop/glass/motion.ts",
+      "sourceSha256": "296898101d851f279482c2c8e1bf21f5064b352c1205ecf9c9a47392838906a3",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/shared.ts",
+      "destination": "desktop/shared.ts",
+      "sourceSha256": "988ed76427c15fe0b32271655846fadb576d204f76bc66984690b9869935efec",
+      "sourceState": "modified"
+    },
+    {
+      "source": "app/lib/analysis-contract.ts",
+      "destination": "shared/analysis-contract.ts",
+      "sourceSha256": "51eb750628feb6bfcad0f60b488b5fd8baa54f56a3d52685146cc8070ae13623",
+      "sourceState": "modified"
+    },
+    {
+      "source": "app/lib/analysis-models.ts",
+      "destination": "shared/analysis-models.ts",
+      "sourceSha256": "7d7944794e328f43e785126880f9f494e36bfa043eb9f3e2b4cee3b36a10d1c3",
+      "sourceState": "modified"
+    },
+    {
+      "source": "app/lib/transcript.ts",
+      "destination": "shared/transcript.ts",
+      "sourceSha256": "9fa0f751302da0587b18db0e1e1d6c200c227ac9aa0c411a2b0e5280c1a84fea",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "app/lib/asr-providers.ts",
+      "destination": "shared/asr-providers.ts",
+      "sourceSha256": "8ca9bb3dc3f09ddd53e6f0b52753e606c0c724c1d8f0a38975d3a04991a04f9e",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "desktop/history-types.ts",
+      "destination": "desktop/history-types.ts",
+      "sourceSha256": "c6ac6b0b0553747905990b09100d5da94e33b17ca7ab1b71ff9699dc62433aa0",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/elastic.ts",
+      "destination": "desktop/glass/elastic.ts",
+      "sourceSha256": "e926c01e52b1756b172da962c94a9c1742167e716c9c891297cd2f8df3adffd3",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/deformation.ts",
+      "destination": "desktop/glass/deformation.ts",
+      "sourceSha256": "9e68a09e1858b7d20150189ad78a69868f630a0c0595c33d90cc409e90bad361",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/desktop-layout.ts",
+      "destination": "desktop/glass/desktop-layout.ts",
+      "sourceSha256": "eff96edf0556c1ce297c9a5c60ebb055332d28db7a68983b685d58b92b4256ef",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/display-adaptation.ts",
+      "destination": "desktop/glass/display-adaptation.ts",
+      "sourceSha256": "808b02b0a10a10aa7763dceae7d12f915d273cad77b6c27fba53155dbafd25f3",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/elevation.ts",
+      "destination": "desktop/glass/elevation.ts",
+      "sourceSha256": "bd1f44d1edb3bbcccd7b59446895a4195edd917c7e6a6d29f07deeafd5648f63",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/display-cache.ts",
+      "destination": "desktop/glass/display-cache.ts",
+      "sourceSha256": "2e7a16bf2dbdc5715daf22851fd1d840f83e80e86fd620442b05333a0be919cf",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/menu-material.ts",
+      "destination": "desktop/glass/menu-material.ts",
+      "sourceSha256": "58cef0f69c5307ec3ab81eec37ecbe503458af3b2a43a0f933757aceebc0a0a8",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/glass.ts",
+      "destination": "desktop/glass/glass.ts",
+      "sourceSha256": "938ae4c0f5cdbf27b1ab7f383ae6fc7978f0c8fe6fb20f7fbae54a96bec7116b",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/geometry.ts",
+      "destination": "desktop/glass/geometry.ts",
+      "sourceSha256": "481561a1eacd3303877ce2279adfe364e9e4f553868c82fe7cdbeab1a7cda507",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/distance-light.ts",
+      "destination": "desktop/glass/distance-light.ts",
+      "sourceSha256": "601aca57f2e1290a08247a35d9143ab7ae0131c9675517b776a98d6ad4c31cee",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/adaptive-ink.ts",
+      "destination": "desktop/glass/adaptive-ink.ts",
+      "sourceSha256": "fb292b594198986159e18a7a12a60b5c356ed02cfef349068482b0e2219c9172",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/spatial-ink.ts",
+      "destination": "desktop/glass/spatial-ink.ts",
+      "sourceSha256": "da62b3d98f6e5cbe297ba8d306c7a70ef1ddc26f5788d1d7097e690ff17e91b3",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/foreground-mask.ts",
+      "destination": "desktop/glass/foreground-mask.ts",
+      "sourceSha256": "65f319850eea8707b9a84ed636ad40f7eae83abd76a0a5115a00d00b6a65acca",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/adaptive-frost.ts",
+      "destination": "desktop/glass/adaptive-frost.ts",
+      "sourceSha256": "563ff57a18fa73a3f4a34be8f6f03de8b2d2b73e4d668b0f7da6275ab361024b",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/panel-shaders.ts",
+      "destination": "desktop/glass/panel-shaders.ts",
+      "sourceSha256": "330854b24094946b1d773f6bf3efc3a94a1a011cafa0e8903b04aafd10f4767f",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/motion-input.ts",
+      "destination": "desktop/glass/motion-input.ts",
+      "sourceSha256": "8ff0acbd3265be7e7168fe611a4e0a9d071156600c916495977d9f931e7968e9",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/motion-preview.ts",
+      "destination": "desktop/glass/motion-preview.ts",
+      "sourceSha256": "3921d8873e5366504de1330bae2876fcc7690b9c9978e6322c2ca6d38ff4e961",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/window-placement.ts",
+      "destination": "desktop/window-placement.ts",
+      "sourceSha256": "2dd97fd6bb22ddd52a195ca7d2ec027ab354e713e50248753fbc55609179c2ff",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/session.ts",
+      "destination": "desktop/session.ts",
+      "sourceSha256": "66ff14a1b18d2e222927167b93b74dd800c56c6739ea2ebb3d59869aa63d8fad",
+      "sourceState": "modified"
+    },
+    {
+      "source": "app/lib/asr-client.ts",
+      "destination": "shared/asr-errors.ts",
+      "sourceSha256": "416c3240696a8f8c32ec9c76543b8127d264cb0221fe23e8c25ab013e90e74a0",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "trusted/analysis/configuration.ts",
+      "destination": "trusted/analysis/configuration.ts",
+      "sourceSha256": "e27e161e00563451a5e23b69db6fd8778bd773ae20c3ffa58ee280bd3f266828",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "trusted/node-only.ts",
+      "destination": "trusted/node-only.ts",
+      "sourceSha256": "ac2e77d00859dcd352b5164256ed30eeeda4a42591a85e4d985262b11b42524f",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "trusted/asr-configuration.ts",
+      "destination": "trusted/asr-configuration.ts",
+      "sourceSha256": "529bb1afee09dc95b7c44c32d5107ad1f826e2fe7485cb6f3a19323ec2eb0b2d",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "desktop/services.ts",
+      "destination": "desktop/services.ts",
+      "sourceSha256": "d1f5a6d97912ebc2dcc8bad8a1ef4507cff6dc22ac85045d5fd5000e68bc698e",
+      "sourceState": "modified"
+    },
+    {
+      "source": "trusted/asr.ts",
+      "destination": "trusted/asr.ts",
+      "sourceSha256": "28cce3e45330607d102be546e70eeb10709b57befcf82725e0f0c80888f92c6a",
+      "sourceState": "modified"
+    },
+    {
+      "source": "trusted/analysis/service.ts",
+      "destination": "trusted/analysis/service.ts",
+      "sourceSha256": "a23dc9fe7a2127c9489c4da7f088c27231e4ef74ad70aa77c6e54a3d1b1a8988",
+      "sourceState": "modified"
+    },
+    {
+      "source": "trusted/analysis/prompt.ts",
+      "destination": "trusted/analysis/prompt.ts",
+      "sourceSha256": "fd19356487730e949a2010a1df58e72628b4e6804eef15552846c627c6e5033c",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "trusted/analysis/text-prompt.ts",
+      "destination": "trusted/analysis/text-prompt.ts",
+      "sourceSha256": "e2bd36664235f28cc3c11146a8f86b4303d6def21d38efae6c19fb3f8c7a117e",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "trusted/analysis/schema.ts",
+      "destination": "trusted/analysis/schema.ts",
+      "sourceSha256": "e39887c96cf571ba7ca1a4c12bca2ec70406e83e3ddc033c36acf48c076c57e8",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "trusted/analysis/input.ts",
+      "destination": "trusted/analysis/input.ts",
+      "sourceSha256": "d2b7e33b0e895bf2e7deaf7832447532720544d69c710dd6eae0483b9873a76e",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/config.ts",
+      "destination": "desktop/config.ts",
+      "sourceSha256": "622c16e1fdc99803fc84d31a5414412079ebeac4b795aa80b3cbb99fb4ee3c8d",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/history.ts",
+      "destination": "desktop/history.ts",
+      "sourceSha256": "ed6246e888db2fa004d0add3e156ceffca95dd0bcdfadee1bacfae84f61a0a9d",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/security.ts",
+      "destination": "desktop/security.ts",
+      "sourceSha256": "ce006cf0c958ae3a056aeeeae150f7e44135508ede34dd282e03d32fb9d97ca1",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/sources.ts",
+      "destination": "desktop/sources.ts",
+      "sourceSha256": "4807892b72f222ddda0f46c1a775e8e44e2a15ca089a8fe1da33f0c340a8f9c9",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/connection-test.ts",
+      "destination": "desktop/connection-test.ts",
+      "sourceSha256": "b5c9ad3d1e19cae6a8e86b6ad768d7d77da1d43fc91a9b7e233a5a34a0cc0e21",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "desktop/configuration-copy.ts",
+      "destination": "desktop/configuration-copy.ts",
+      "sourceSha256": "d63d924f28fcdb8331603624cd076d8d90310928f47ccb3e3b5f59fa4cd3b2df",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "desktop/window-preferences.ts",
+      "destination": "desktop/window-preferences.ts",
+      "sourceSha256": "6c4927ec86df126e1cda4374502fdfec4bbc59fbf35e89c738bc96fefdccd52f",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/material.ts",
+      "destination": "desktop/material.ts",
+      "sourceSha256": "45d47bb213af29fbc216dfb25777646d80ab7af707b50ee3d5a2998419417f96",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/surface-motion.ts",
+      "destination": "desktop/surface-motion.ts",
+      "sourceSha256": "10a81c1f4f344711cdf767f927d5970fa7938c786629d1a50012d307c2c3580a",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/surface-shadow.ts",
+      "destination": "desktop/surface-shadow.ts",
+      "sourceSha256": "5ccf72c85c14b30060712394e0bceea1774e45ab002988517c3fc8854c4c9393",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/shadow-bitmap.ts",
+      "destination": "desktop/shadow-bitmap.ts",
+      "sourceSha256": "6636d22466a0544c47ed7650d159759334e80818d85f2668f30877c2a0e2843a",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/host.ts",
+      "destination": "desktop/glass/host.ts",
+      "sourceSha256": "45c30d6c6e9d0560b6037dd99a1337ab83db5dff575acc5aa8960e41cc625e4a",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/settings-store.ts",
+      "destination": "desktop/glass/settings-store.ts",
+      "sourceSha256": "4cd8c9b748b51b45aedb27b03da93d466bc38f4d79b1790cbf79ce9bfc28c25b",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/presets.ts",
+      "destination": "desktop/glass/presets.ts",
+      "sourceSha256": "b8d5f0fd23acec3e4b2d708a23e00efc3a7fe23b90c74a63a13e691abe382082",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/presets/static-accepted24.json",
+      "destination": "desktop/glass/presets/static-accepted24.json",
+      "sourceSha256": "c85f712063998df003e024237772e26190e3ed701932b02a74335abe71a525ad",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/presets/motion-accepted10.json",
+      "destination": "desktop/glass/presets/motion-accepted10.json",
+      "sourceSha256": "abf5669b99867deec269f01b555f6d56a9ff7a5fd14d1169bda1f366f28edae7",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/api.ts",
+      "destination": "desktop/glass/api.ts",
+      "sourceSha256": "a281baedebc4f83cd239973269d964b15cc919853204899171302dfa3e85a0c4",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/permission.ts",
+      "destination": "desktop/glass/permission.ts",
+      "sourceSha256": "2c540e60839de4f5512604e91dedf725e13daf5d9b992fe13682cffacba95a97",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/preload.ts",
+      "destination": "desktop/preload.ts",
+      "sourceSha256": "b52187ec7b321a97434fc5ce250deddb9149d483ae07c29614ccf5b73a3907de",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/media-preload.ts",
+      "destination": "desktop/media-preload.ts",
+      "sourceSha256": "df2ceb1bac495ac2437d7d3a25bbc5153e35beb8cf279053d6c8744ff0df3cec",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/ui.tsx",
+      "destination": "desktop/ui.tsx",
+      "sourceSha256": "88205d59c15c0e20df25201dbe06c6ebf8a6fbbbd8c7c59c7b069be27cff5635",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/configuration-panel.tsx",
+      "destination": "desktop/configuration-panel.tsx",
+      "sourceSha256": "f52b99f3c2b4e44f2a3e23d6e5b40cd50e57584eee11a6415827513664e746ff",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/configuration-dialog.tsx",
+      "destination": "desktop/configuration-dialog.tsx",
+      "sourceSha256": "faa8b1990a5e4706054ad9c77c6fb15ec831671fb7fe0e146f22a6abea2e5aae",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "desktop/window-preferences-panel.tsx",
+      "destination": "desktop/window-preferences-panel.tsx",
+      "sourceSha256": "942181a9c825aa05eccd2610b09ca9b632c607b52b75115fa571c40f352e2a81",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/window-heading.tsx",
+      "destination": "desktop/window-heading.tsx",
+      "sourceSha256": "ec44fde6c5ba4bf53b8876bca401126415e4d186083e192ec8f6a7a8dd8939c7",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "desktop/ui-icon.tsx",
+      "destination": "desktop/ui-icon.tsx",
+      "sourceSha256": "a57a2b5a832f3e3a8c3a582dd6665bc8c6f949441d8c129f98f723a541fbc4e2",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/learning-surfaces.tsx",
+      "destination": "desktop/learning-surfaces.tsx",
+      "sourceSha256": "79b8aeaac1b90d46ab920335046c5194895741e0a3db4dccb0accefe7db2c9c9",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/feedback-markdown.tsx",
+      "destination": "desktop/feedback-markdown.tsx",
+      "sourceSha256": "3af37eff058e3b4e4035822bd4b63df3af09abb3f3ecca1e41e77aab49479aae",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/learning-view.ts",
+      "destination": "desktop/learning-view.ts",
+      "sourceSha256": "3b4516714e660201c6b3d1a8f1207f988f62fbe210226fe594793eaa40730490",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/history-view.tsx",
+      "destination": "desktop/history-view.tsx",
+      "sourceSha256": "05fbf6d321f6618ef13bf57cd41d66dbeb575fac8c0f408bd8b64c4368322ca2",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/ui.css",
+      "destination": "desktop/ui.css",
+      "sourceSha256": "0d773ee37f95eb87047cc87f7f88272c6f1f6b664b136758a20da68d5ddbaa13",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/configuration-panel.css",
+      "destination": "desktop/configuration-panel.css",
+      "sourceSha256": "ad987e3b15cca84106d24a80894ea193dcb199e52f463a29a9cdafb11c610b37",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "desktop/learning-surfaces.css",
+      "destination": "desktop/learning-surfaces.css",
+      "sourceSha256": "b1163e66f0949f03e75d2c2e9f2c20399d80be4b82c4a1d0b88fbcb1fab2fdda",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/media.ts",
+      "destination": "desktop/media.ts",
+      "sourceSha256": "311da9c55c84d281f6bb429ee526fbd300caf76c7893c78703a88f38c6b0c125",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/pcm-sender.ts",
+      "destination": "desktop/pcm-sender.ts",
+      "sourceSha256": "7376695bad8a4c018e62f172f55dcb3ff6b4bda180edc6761eb5e965ce53ac03",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/entry.tsx",
+      "destination": "desktop/glass/entry.tsx",
+      "sourceSha256": "f78242bc8b3339266d23791fcea66a95f1a013ac9b8250424494301c75149753",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/capsule.tsx",
+      "destination": "desktop/glass/capsule.tsx",
+      "sourceSha256": "b8515b86f8ffa921de9002d91faabda8603ae54c1454ee67d30e97f351c0eecd",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/menu.tsx",
+      "destination": "desktop/glass/menu.tsx",
+      "sourceSha256": "534ea0af5ef028d1f0efa916a9f767d24c783a881b3977519aa238e814a653d6",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/menu.css",
+      "destination": "desktop/glass/menu.css",
+      "sourceSha256": "ab20c3861d72d20d74bf041d68763922482a8fef9cf2c1efac90d012e72d3017",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/capture.ts",
+      "destination": "desktop/glass/capture.ts",
+      "sourceSha256": "88cff3cbef9ae6b76684da84b22514f985400c236509f2dbaa865bcfac874f6a",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/frame-scheduler.ts",
+      "destination": "desktop/glass/frame-scheduler.ts",
+      "sourceSha256": "0461b29587bfe12d1404b381b9d9b265380cb8745b2547c3870a0fb4c66b1fce",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/display-streams.ts",
+      "destination": "desktop/glass/display-streams.ts",
+      "sourceSha256": "eac43482b7ab4432f7499e055fad49ea37f55993f3b67626c41a817b7b66fe64",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/readability.ts",
+      "destination": "desktop/glass/readability.ts",
+      "sourceSha256": "e03a8138a144c85b08da0d3243d50201b2b2e60031e35618e5612bac672a08fd",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/appearance.tsx",
+      "destination": "desktop/glass/appearance.tsx",
+      "sourceSha256": "30219b96523704a2000717f10bbcecde2d813d3c324db6b7368dcff4e3c248a4",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/material-tuner.tsx",
+      "destination": "desktop/glass/material-tuner.tsx",
+      "sourceSha256": "06231e3c7bf3f8115405c104ca02e52384ba8d32b25b022e0d401d77b392999b",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/motion-tuner.tsx",
+      "destination": "desktop/glass/motion-tuner.tsx",
+      "sourceSha256": "c4c0fd621d92d07807a3b3baad58751bf355135fda16f17844ff84002d37279a",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/ui.css",
+      "destination": "desktop/glass/ui.css",
+      "sourceSha256": "1d03e86a204bac1bd1fb60878000a52724c4b68fb39982b6d09b2f031cd9415c",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/t16-analysis.test.ts",
+      "destination": "desktop/tests/t16-analysis.test.ts",
+      "sourceSha256": "dc2e2a19cbf1e543338c923f9caaff32c1d9f6ae3525d8112c25e32e01516500",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "desktop/tests/t16-config.test.ts",
+      "destination": "desktop/tests/t16-config.test.ts",
+      "sourceSha256": "c21c9007daaefbf2dfb4629069a5d66e21d8bf1908f4732f6a3aaa704b6cb3d1",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "desktop/tests/t16-windows.test.ts",
+      "destination": "desktop/tests/t16-windows.test.ts",
+      "sourceSha256": "7128ce88cba6f6b6a6116b6d9543f3b964ae43526d967032b69eb3771d12130d",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "desktop/tests/feedback-markdown.test.ts",
+      "destination": "desktop/tests/feedback-markdown.test.ts",
+      "sourceSha256": "29a9472ecac6179d1b5b0406e2a2ad006f676208a4a290c159db818e7747cc1b",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/adaptive-ink.test.ts",
+      "destination": "desktop/tests/glass/adaptive-ink.test.ts",
+      "sourceSha256": "a676333e739b56c2344859d099c8773a5d9c03ba577c53f83476e40c79d94308",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/deformation.test.ts",
+      "destination": "desktop/tests/glass/deformation.test.ts",
+      "sourceSha256": "f629ae098b2eb04fc63c11104788f2db05b4190ae638bdb7119c1558cb1bb7c1",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/elastic.test.ts",
+      "destination": "desktop/tests/glass/elastic.test.ts",
+      "sourceSha256": "25dcbd04491054f3d38e2e3c4ee2edf8a2b0b9dfb72084dcbbd14c3cc3587bef",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/motion-tuning.test.ts",
+      "destination": "desktop/tests/glass/motion-tuning.test.ts",
+      "sourceSha256": "843ea7d63dced5c49763bd67b841f2847a51549fb643c87ba40c052ce095cd92",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/motion.test.ts",
+      "destination": "desktop/tests/glass/motion.test.ts",
+      "sourceSha256": "afdf84722f314397aad7c6beb902f45ddcefd87a7d2f040ae5ee25a7d0a727ed",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/simulated.ts",
+      "destination": "desktop/tests/glass/simulated.ts",
+      "sourceSha256": "ebc89a7d48e4e82b186a1db31ee4596e3432b600b8a438e8b8969342434ea2c7",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/probe.test.ts",
+      "destination": "desktop/tests/glass/probe.test.ts",
+      "sourceSha256": "f697cf4108f8892680364658c33028136f6c3ad807b4aea1171901b44a737176",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/session.test.ts",
+      "destination": "desktop/tests/session.test.ts",
+      "sourceSha256": "ddc095816c2212a2201e962c51e2b483017f544709d0c4009bb423b35b9d1a3e",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/fakes.ts",
+      "destination": "desktop/tests/fakes.ts",
+      "sourceSha256": "312d94574390ef5a35e7694d956bf93753f69e976ef50184e9334b67de4651fb",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/demo.ts",
+      "destination": "desktop/demo.ts",
+      "sourceSha256": "729cd10d56d97f418e4096a78c64dd71cb5c227b938334e997799c94ab13f5a0",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/t11-asr.test.ts",
+      "destination": "desktop/tests/t11-asr.test.ts",
+      "sourceSha256": "544d251790e96e2bfb143f31a67838bd92c4fef1b1b756a68ee874fec4c83b49",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/tests/t11-config-pcm.test.ts",
+      "destination": "desktop/tests/t11-config-pcm.test.ts",
+      "sourceSha256": "4b8d26d8ff1ca36e0e1a35128328f5c8022b58226294aab7a14743fb92a1b63c",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/tests/t11-flow.test.ts",
+      "destination": "desktop/tests/t11-flow.test.ts",
+      "sourceSha256": "3daf97bd067f1e4467b465c7f785b00842e9e9b1da7d8360e44eaa62314602ee",
+      "sourceState": "modified"
+    },
+    {
+      "source": "desktop/tests/t12-history.test.ts",
+      "destination": "desktop/tests/t12-history.test.ts",
+      "sourceSha256": "3cc4d662f1d8c0db3ca0944d8b97e28cc1d43b3599c791a954282865a9199646",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/t13-interaction.test.ts",
+      "destination": "desktop/tests/t13-interaction.test.ts",
+      "sourceSha256": "72b4cab16373a6414d6f580b6a1529a600e24808eb4e4ead99f0621e9744e58e",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/t14-5-material-motion.test.ts",
+      "destination": "desktop/tests/t14-5-material-motion.test.ts",
+      "sourceSha256": "156c44c4fe30cb61656da07109de8a50f1e33431f7b1c5453cbb8ff2a17552ff",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/t15-appearance.test.ts",
+      "destination": "desktop/tests/t15-appearance.test.ts",
+      "sourceSha256": "4ce6d06f36497285d99b6cbba2b69578a8f1a2fd4c69298c49332f809da6b7d1",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/t15-display-cache.test.ts",
+      "destination": "desktop/tests/t15-display-cache.test.ts",
+      "sourceSha256": "c0e95b04f7124d140445c076cc75e7bfbe9973421b13933921e57407e42e1632",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/t15-displays.test.ts",
+      "destination": "desktop/tests/t15-displays.test.ts",
+      "sourceSha256": "f7b6c89f1d8a4eb44306708e2238f263d494294bee579df0fc16036e9ac3e143",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/t15-menu.test.ts",
+      "destination": "desktop/tests/t15-menu.test.ts",
+      "sourceSha256": "05642d715d18bf9fe05ad68d4ef0c316dd3682aa6dc8c168f8ca5c82281704e6",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/optics-gpu.ts",
+      "destination": "desktop/tests/glass/optics-gpu.ts",
+      "sourceSha256": "855b2c02bf3804cc3acdef2a0a3064898169fee097f7d719295ab0fa233586b7",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/menu-gpu.tsx",
+      "destination": "desktop/tests/glass/menu-gpu.tsx",
+      "sourceSha256": "c32e0876b772299829798d7386b3e93482ad5b389ff3a5cd0e1b8602b1e15ce8",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/motion-dom.tsx",
+      "destination": "desktop/tests/glass/motion-dom.tsx",
+      "sourceSha256": "52bdc7209fecdd7979dab7a5a19a117199c78a75344e885f88dbbf45a59aea7f",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/adaptive-ink-gpu.ts",
+      "destination": "desktop/tests/glass/adaptive-ink-gpu.ts",
+      "sourceSha256": "f04a84a1cf808c078db81f1f8601b556a76a203e691ed34a2761d14892ce8cd2",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/spatial-ink-gpu.tsx",
+      "destination": "desktop/tests/glass/spatial-ink-gpu.tsx",
+      "sourceSha256": "8194ac07a6ae4e4042146ce67a5d1af2c6e8b8009f2b6ea15a65b6c2f8225d43",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/readability-dom.tsx",
+      "destination": "desktop/tests/glass/readability-dom.tsx",
+      "sourceSha256": "51bcf7356bf13a87356cc93dd1eea0e949e15dcd90ee3f2a42fd4b52f0460e59",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/adaptive-frost-gpu.ts",
+      "destination": "desktop/tests/glass/adaptive-frost-gpu.ts",
+      "sourceSha256": "85e7ef348fe92550a5a0a6d8966546a37b2ec645c96818c394707e7a3482cedf",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/elevation-gpu.ts",
+      "destination": "desktop/tests/glass/elevation-gpu.ts",
+      "sourceSha256": "a18bb2d326c81f53d54fcef80af4533bc986b5a690b7113eaaaafd6421d25b06",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/tests/glass/displays-gpu.ts",
+      "destination": "desktop/tests/glass/displays-gpu.ts",
+      "sourceSha256": "57d4941afadee8794eb09a0b4f9e3b2c18aa0574b925e197d9fb940ff381bc53",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "tests/t16-settings.check.tsx",
+      "destination": "tests/t16-settings.check.tsx",
+      "sourceSha256": "b63824fea862739337e26f5a4976687eb17758e713fdc5a01b4191be534f2561",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "tests/t16-windows.check.tsx",
+      "destination": "tests/t16-windows.check.tsx",
+      "sourceSha256": "1588e6a9ac75b22a450d5ba726c47720f9840cb70287689d2217599456f7a966",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "tests/transcript.test.ts",
+      "destination": "tests/transcript.test.ts",
+      "sourceSha256": "a9510441c207abbfa829df2815ed6045b087e968812dfb4e80d5a81060dd20ae",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "scripts/build-desktop.mjs",
+      "destination": "scripts/build-desktop.mjs",
+      "sourceSha256": "d43dc1b4d6cd2c0181640525f76db1a7cb130977765cdf8d76a14df82ba9d399",
+      "sourceState": "modified"
+    },
+    {
+      "source": "scripts/desktop-resources.mjs",
+      "destination": "scripts/desktop-resources.mjs",
+      "sourceSha256": "05d0fb969fda851043a011a686a5ea09da3eb528b82761d6fc399d6513eae031",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "scripts/package-desktop.mjs",
+      "destination": "scripts/package-desktop.mjs",
+      "sourceSha256": "2ce6c1ad7df5bc0f179abffa0ed0a53d5c3af6df82b8658eb7dc24907423290b",
+      "sourceState": "modified"
+    },
+    {
+      "source": "scripts/verify-t16-package.mjs",
+      "destination": "scripts/verify-package.mjs",
+      "sourceSha256": "53f7c9672a26c9237d6d9a0807de813ac85fcc7a7f5c15aa06ec3a0c33e11b8a",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "scripts/t15-main-errors.mjs",
+      "destination": "scripts/main-errors.mjs",
+      "sourceSha256": "9068bce8142a575905aef5cbcb366d4d8f2f0ca7b1a493f42024b0d096e74903",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "scripts/verify-t16-windows.mjs",
+      "destination": "scripts/verify-windows.mjs",
+      "sourceSha256": "7c8962f9a8ae4e585440fafa06ed28762a586abd8bec4977f50814999bd4b77b",
+      "sourceState": "untracked"
+    },
+    {
+      "source": "scripts/verify-t15-optics.mjs",
+      "destination": "scripts/verify-glass.mjs",
+      "sourceSha256": "4398b6b1ad23007abffad683df252b0bbd83d8bcdb0f585b42c14fcc6874d5ed",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/index.html",
+      "destination": "desktop/index.html",
+      "sourceSha256": "80fa2e64fe611f823135e71bd6e92c62dd4da12ec950d7d04feefff3bf725219",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/media.html",
+      "destination": "desktop/media.html",
+      "sourceSha256": "e25f86b6765dae79a8deeaa44f0a48853973dc26c5f6f9bdac3c2fd11476667d",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/index.html",
+      "destination": "desktop/glass/index.html",
+      "sourceSha256": "b0a38970bfa304066a3e0fc49325a2122b78ab431796c84c847c78c1f7b7e9f1",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/native/source-catalog.cs",
+      "destination": "desktop/native/source-catalog.cs",
+      "sourceSha256": "577773d7d842a65b70d368aea7b737a7a66e5dc19349744ccfd1e96f21ec85b6",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/UPSTREAM.md",
+      "destination": "desktop/glass/UPSTREAM.md",
+      "sourceSha256": "c2d78f090f161cfa4877e955efcbd59bf43656e36033e2e58bdc8632cbc05bb7",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "desktop/glass/upstream/LICENSE.txt",
+      "destination": "desktop/glass/upstream/LICENSE.txt",
+      "sourceSha256": "fc2398f73fb001de6506ff9258276f41d0cc7642d1f1a41cbbfd791f346a68ef",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "public/pcm-worklet.js",
+      "destination": "public/pcm-worklet.js",
+      "sourceSha256": "e3031a0b89c1ed265f77687bcd4248c6509f6cfee91bca053e6d1670faf95464",
+      "sourceState": "tracked-unchanged"
+    },
+    {
+      "source": "scripts/t16-window-order.ps1",
+      "destination": "scripts/window-order.ps1",
+      "sourceSha256": "f861ae0919f786dca52590001c428041987e63d299725ccc99f16690770ee8ea",
+      "sourceState": "untracked"
+    }
+  ]
+}

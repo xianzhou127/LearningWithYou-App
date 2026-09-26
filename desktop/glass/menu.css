@@ -1,0 +1,28 @@
+/* Existing menu layout and actions, with the capsule's shared material behind it. */
+.liquid-menu{position:absolute;transform-origin:0 0;isolation:isolate;color:#15202f}
+.liquid-menu>canvas{pointer-events:none;z-index:-1}
+.liquid-menu .learning-more{position:relative;width:100%;height:100%;overflow:auto;border-radius:16px;background:rgba(235,241,248,.96)}
+.liquid-menu[data-material=live] .learning-more{background:transparent}
+.liquid-menu .menu-content{display:flex;flex-direction:column;padding:12px;position:relative}
+.liquid-menu header{display:flex;justify-content:space-between;align-items:center;padding:0 4px 8px;font-size:12px}
+.liquid-menu button{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:6px 10px;min-height:32px;line-height:1.5;border:0;border-radius:8px;background:transparent;color:inherit;font-size:13px;flex:none}
+.liquid-menu .icon-button{width:28px;height:28px;min-height:28px;padding:5px}
+.liquid-menu .ui-icon{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7}
+.liquid-menu .menu-content>button{justify-content:flex-start;min-height:34px}
+.liquid-menu button:hover:enabled{background:rgba(255,255,255,.45)}
+.liquid-menu button:active:enabled{background:rgba(220,235,249,.6)}
+.liquid-menu .menu-content>p{color:inherit;opacity:.75;font-size:11px;line-height:1.7;margin:6px 4px 0}
+.liquid-menu .menu-divider{height:1px;flex:none;background:rgba(125,140,155,.25);margin:8px 4px}
+.liquid-menu .menu-utilities{display:flex;gap:8px}
+.liquid-menu .menu-utilities button{flex:1;font-size:12px}
+.liquid-menu .menu-problem{padding:10px;border-radius:8px;font-size:12px;line-height:1.7;overflow-wrap:anywhere;margin-bottom:8px}
+.liquid-menu .menu-problem button{margin-top:8px;font-size:11px}
+.liquid-menu[data-material=live][data-reading=true][data-field-ready=true] .menu-content *{color:transparent!important;text-shadow:none!important;outline-color:transparent!important;background:transparent!important}
+.liquid-menu[data-material=failed] .learning-more::after{content:'菜单材质不可用';position:sticky;bottom:0;display:block;text-align:center;background:#fff0df;color:#754b19;font-size:10px}
+.learning-toolbar .toolbar-more svg{width:17px;height:17px;stroke-width:2}
+@keyframes liquid-menu-enter{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.liquid-menu{animation:none}}
+
+/* Opacity gates the entire subtree, including canvases that explicitly set
+   visibility:visible. Keep layout measurable for startup prewarming. */
+.liquid-menu:not([data-open=true]),.liquid-menu:not([data-material=live]):not([data-material=off]):not([data-material=failed]){opacity:0;visibility:hidden;pointer-events:none}

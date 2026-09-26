@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+desktop/glass/upstream/LICENSE.txt -text
+desktop/glass/UPSTREAM.md -text
+desktop/glass/presets/*.json -text

@@ -1,0 +1,117 @@
+/* T14.5: real desktop Acrylic is supplied by Electron/DWM, never backdrop-filter. */
+.learning-toolbar, .floating-surface {
+  color: var(--ink); background: var(--glass-operation);
+}
+/* Unsupported OS, reduced transparency and API failure remain readable. */
+html[data-material=solid] { --glass-operation: var(--glass-solid); --glass-menu: var(--glass-solid); --glass-reading: #fafbfd; --glass-chrome: #f1f4f9; }
+@media (prefers-reduced-transparency: reduce), (forced-colors: active) {
+  :root { --glass-operation: Canvas; --glass-menu: Canvas; --glass-reading: Canvas; --glass-chrome: Canvas; }
+}
+html[data-role=orb], html[data-role=menu],
+html[data-role=orb] .desktop-surface, html[data-role=menu] .desktop-surface { background: transparent; }
+/* One painted curve, without a second mismatched rounded ancestor clipping it. */
+html:is([data-role=orb], [data-role=menu], [data-role=feedback]) .desktop-surface { border-radius: 0; }
+/* A native region matches the 20/16px CSS curve. DWM rounding is disabled;
+   the independent, non-interactive alpha shadow extends only 3 DIP. */
+.learning-toolbar { position: relative; height: 40px; width: 100%; display: grid; grid-template-columns: 32px minmax(0, 1fr) 105px 26px 22px; align-items: center; gap: 3px; padding: 3px 8px 3px 4px; border-radius: var(--glass-radius); box-shadow: var(--surface-shadow); user-select: none; }
+.learning-toolbar::after { content: ""; position: absolute; inset: 1px; border-radius: inherit; pointer-events: none; box-shadow: inset 0 1px 0 #ffffff8c; }
+.learning-toolbar button { overflow-wrap: normal; white-space: nowrap; }
+html[data-role=orb] .learning-toolbar { height: 100dvh; }
+.learning-toolbar .toolbar-grip { width: 32px; height: 32px; min-height: 32px; padding: 6px; border: 0; border-radius: 10px; background: transparent; color: var(--muted); cursor: grab; touch-action: none; }
+.toolbar-grip .ui-icon { width: 20px; height: 20px; }
+/* Windows owns capture/release, including fast movement outside this button.
+   The preview keeps this disabled; keyboard nudging remains a normal button. */
+.learning-toolbar[data-native-drag=true] .toolbar-grip { app-region: drag; }
+.learning-toolbar .toolbar-grip:is(:hover, :active) { background: transparent; box-shadow: none; }
+/* Paint both 36px end caps on the capsule so they share its exact outer curve. */
+.learning-toolbar { --edge-width: 36px; --left-edge: transparent; --right-edge: transparent; }
+.learning-toolbar:has(.toolbar-grip:is(:hover, :active), .toolbar-more:is(:hover, :active, [aria-expanded=true])) {
+  background-image: linear-gradient(90deg, var(--left-edge) 0 var(--edge-width), transparent var(--edge-width)), linear-gradient(270deg, var(--right-edge) 0 var(--edge-width), transparent var(--edge-width));
+}
+.learning-toolbar:has(.toolbar-grip:hover) { --left-edge: var(--edge-hover); }
+.learning-toolbar:has(.toolbar-grip:active) { --left-edge: var(--edge-active); }
+.learning-toolbar:has(.toolbar-more:is(:hover, [aria-expanded=true])) { --right-edge: var(--edge-hover); }
+.learning-toolbar:has(.toolbar-more:active) { --right-edge: var(--edge-active); }
+.toolbar-grip:active { cursor: grabbing; }
+.toolbar-grip .ui-icon, .toolbar-more .ui-icon { stroke-width: 3; }
+.toolbar-status { min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 0; }
+.toolbar-state { display: flex; align-items: center; gap: 4px; font-size: 12px; line-height: 17px; white-space: nowrap; }
+.toolbar-state strong { font-weight: 600; overflow: hidden; text-overflow: ellipsis; }
+.toolbar-state time { font-variant-numeric: tabular-nums; font-size: 12px; }
+.state-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); flex: none; }
+.recording-dot { background: var(--recording); }
+.learning-toolbar[data-phase=recording] .toolbar-state { color: var(--recording); }
+.learning-toolbar[data-phase=feedback] .state-dot { background: var(--accent); }
+.learning-toolbar[data-phase=error] .toolbar-state { color: var(--error); }
+.learning-toolbar .toolbar-context { display: block; text-align: left; padding: 0; margin: 0; min-height: 14px; border: 0; border-radius: 3px; background: transparent; font-size: var(--text-compact); line-height: 14px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; }
+.learning-toolbar .toolbar-context:hover { background: transparent; text-decoration: underline; }
+.learning-primary { flex: none; min-height: 40px; height: 40px; border-radius: 14px; font-size: 12px; font-weight: 600; padding: 8px 12px; gap: 7px; transition: transform var(--motion-release) var(--ease-spring), background-color 120ms ease-out, color 120ms ease-out; }
+.learning-primary:active:enabled { transform: scale(.965); transition-duration: var(--motion-press); box-shadow: inset 0 1px 3px #17284130; }
+.learning-primary .primary-symbol { display: flex; animation: symbol-in 180ms ease-out; }
+.learning-primary:disabled .primary-symbol { animation: none; }
+.learning-primary:disabled .ui-icon { animation: working-turn 1.8s linear infinite; }
+.learning-toolbar .learning-primary { min-height: 32px; height: 32px; margin-left: 5px; padding: 4px; gap: 3px; font-size: 12px; border-radius: 16px; }
+.learning-toolbar .learning-primary .ui-icon { width: 14px; height: 14px; }
+.learning-toolbar .toolbar-feedback, .learning-toolbar .toolbar-more { min-height: 32px; height: 32px; padding: 4px; border: 0; background: transparent; color: var(--muted); border-radius: 10px; }
+.learning-toolbar .toolbar-feedback { display: flex; flex-direction: column; gap: 1px; font-size: 10px; }
+.learning-toolbar .toolbar-feedback:disabled { color: var(--disabled-ink); opacity: 1; }
+.learning-toolbar .toolbar-feedback:hover:enabled { color: var(--accent); background: var(--accent-soft); }
+.learning-toolbar .toolbar-feedback:active:enabled { background: var(--edge-active); box-shadow: none; }
+.learning-toolbar .toolbar-feedback.is-ready { color: var(--accent); animation: feedback-arrived 620ms ease-out 1; }
+.learning-toolbar button[aria-expanded=true] { background: var(--accent-soft); color: var(--accent); }
+.learning-toolbar .toolbar-more:is(:hover, :active, [aria-expanded=true]) { background: transparent; box-shadow: none; }
+.learning-toolbar button:focus-visible { outline-offset: -2px; }
+.floating-surface { position: relative; height: 100%; min-height: 0; border-radius: var(--window-radius); overflow: hidden; transform-origin: top right; opacity: 1; transform: translateY(0); transition: opacity var(--motion-close) ease-out, transform var(--motion-open) var(--ease-spring); }
+/* Keep the edge above opaque header/footer paint, wholly inside the native mask. */
+.floating-surface::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; box-shadow: var(--surface-shadow); z-index: 2; }
+.floating-surface[data-direction=up] { transform-origin: bottom right; }
+.floating-surface[data-open=false] { opacity: 0; transform: translateY(-5px); pointer-events: none; }
+.floating-surface[data-open=false][data-direction=up] { transform: translateY(5px); }
+/* The native spring fades HTML and the system backdrop as one surface. Keep
+   the full native/painted contour stable; only menu content moves near its origin. */
+html:is([data-role=menu], [data-role=feedback]) .floating-surface { opacity: 1; transform: none; transition: none; }
+.menu-content { transform: translateY(0); transition: transform var(--motion-open) var(--ease-spring), opacity var(--motion-close) ease-out; }
+.floating-surface[data-open=false] .menu-content { transform: translateY(-5px); opacity: 0; transition-timing-function: var(--ease-gather); }
+.floating-surface[data-open=false][data-direction=up] .menu-content { transform: translateY(5px); }
+.learning-feedback { display: flex; flex-direction: column; background: var(--surface); }
+html[data-role=feedback] .learning-feedback { border-radius: 0; }
+.learning-feedback::after { box-shadow: none; }
+.reading-header { flex: none; display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: var(--surface-chrome); border-bottom: 1px solid var(--line); }
+.reading-header > div { flex: 1; min-width: 0; display: flex; align-items: baseline; gap: 10px; }
+.reading-header h1 { flex: none; font-size: 14px; line-height: 1.5; font-weight: 600; margin: 0; }
+.reading-header p { min-width: 0; font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0; }
+.reading-header .icon-button { width: 28px; height: 28px; }
+.learning-feedback[data-direction=up] .reading-header .ui-icon { transform: rotate(180deg); }
+.learning-feedback .feedback-body { margin: 0; padding: 10px 16px; flex: 1; min-height: 0; overflow: auto; font-size: 14px; line-height: 1.85; scrollbar-gutter: stable; background: var(--surface); }
+.learning-feedback .feedback-markdown { font-size: 14px; line-height: 1.85; }
+.learning-feedback .feedback-markdown h2 { margin-top: 22px; font-size: 18px; line-height: 1.65; }
+.learning-feedback .feedback-markdown h3 { margin-top: 22px; font-size: 15px; }
+.learning-feedback .feedback-markdown > :first-child { margin-top: 0; }
+.reading-footer { flex: none; display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 14px; margin: 0; padding: 6px 12px; background: var(--surface-chrome); border-top: 1px solid var(--line); }
+.quiet-action, .feedback-evidence { border: 0; background: transparent; color: var(--muted); font-size: 12px; padding: 4px 0; justify-content: flex-start; min-height: 28px; white-space: nowrap; }
+.reading-footer .learning-primary { min-height: 32px; height: 32px; border-radius: 10px; padding: 5px 10px; }
+.learning-more { overflow: auto; background: var(--glass-menu); }
+.menu-content { display: flex; flex-direction: column; padding: 12px; }
+.learning-more header { display: flex; justify-content: space-between; align-items: center; padding: 0 4px 8px; font-size: 12px; }
+.menu-content > button { justify-content: flex-start; border: 0; background: transparent; min-height: 34px; flex: none; font-size: 13px; }
+.menu-content > button > .ui-icon { color: var(--muted); }
+.menu-content > button:hover:enabled { background: var(--layer); }
+.menu-content > button:active:enabled { background: var(--accent-soft); box-shadow: none; }
+.menu-content > p { color: var(--muted); font-size: 11px; line-height: 1.7; margin: 6px 4px 0; }
+.menu-divider { height: 1px; flex: none; background: var(--line); margin: 8px 4px; }
+.menu-utilities { display: flex; gap: 8px; }
+.menu-utilities button { flex: 1; font-size: 12px; background: transparent; border: 0; }
+.menu-problem { padding: 10px; color: var(--error); background: var(--error-bg); border-radius: var(--radius); font-size: 12px; line-height: 1.7; overflow-wrap: anywhere; margin-bottom: 8px; }
+.menu-problem button { margin-top: 8px; font-size: 11px; }
+@keyframes feedback-arrived { 0%,100% { background-color: transparent; } 35% { background-color: var(--accent-soft); } }
+@keyframes symbol-in { from { opacity: .4; transform: scale(.86); } to { opacity: 1; transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .learning-toolbar *, .floating-surface, .floating-surface * { animation: none !important; transition: none !important; }
+  .learning-primary:active:enabled, .floating-surface[data-open=false], .floating-surface .menu-content { transform: none !important; }
+}
+@media (max-width: 360px) {
+  .reading-header { padding-inline: 10px; }
+  .learning-feedback .feedback-body { padding-inline: 12px; }
+  .reading-footer { padding-inline: 10px; gap: 8px; }
+  .reading-footer .learning-primary { padding-inline: 8px; font-size: 11px; }
+}
