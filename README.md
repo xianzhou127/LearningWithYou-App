@@ -44,7 +44,11 @@
 - 可工作的图形桌面及 WebGL2。界面字体为 Windows Segoe UI / 微软雅黑，MathML 使用 Cambria Math；这些是系统字体，不随源码重新分发。中文或公式缺字时检查系统字体组件。
 - 首次安装需要联网下载 npm 依赖及 Electron。不要禁用依赖脚本；允许构建的包在 `pnpm-workspace.yaml` 中列明。
 
+仓库为 Private，需要具有访问权限的 GitHub 账号；首次 clone 按 Git 提示完成认证。
+
 ```powershell
+git clone https://github.com/xianzhou127/LearningWithYou-App.git
+cd LearningWithYou-App
 node --version
 npm install --global pnpm@11.19.0
 pnpm install --frozen-lockfile

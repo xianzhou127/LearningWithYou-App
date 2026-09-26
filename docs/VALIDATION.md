@@ -49,7 +49,11 @@
 
 ## GitHub
 
-GitHub CLI 已通过官方发布 SHA256 校验取得，`gh auth status` 显示未登录。所有可独立完成的本地工作已完成，当前只等待用户登录后新建 Private 仓库、推送并核验远端；没有创建公网部署、npm 发布或二进制 Release。
+用户完成 GitHub 官方设备登录后，唯一活动账号为 `xianzhou127`。同名仓库查询明确返回 404，随后新建并上传 [xianzhou127/LearningWithYou-App](https://github.com/xianzhou127/LearningWithYou-App)。API 核验可见性 **PRIVATE**、默认分支 **main**；首轮上传 SHA 为 `516061a53b4b1f5384aec40fa9711dbb373d103d`，与本地一致。README、package.json、锁文件、LICENSE、第三方声明及源代码均经远端 API/clone 核验存在。
+
+从上述 GitHub URL 在另一个全新目录重新 clone，并使用独立 pnpm 存储干净安装。23 个直接运行/开发依赖都解析到该远端检出内部。再次通过类型检查、无警告 lint、172/172 测试、生产构建、Windows C# 辅助编译、383 项资源/原生依赖/哈希验证与约 389.47 MiB 打包。该包的 `test:package` 也通过（真实 EXE + Windows 加密 + 本地 mock + 重启，零主进程/渲染异常），检出无 Git 修改。
+
+最后仅追加 README 克隆命令和本验证/状态记录，推送后再次对齐远端 SHA 与 clone。没有上传二进制、原始日志或用户数据，没有创建公网部署、npm 发布或 GitHub Release。仓库保留全新独立历史，不含来源 Git 历史；源码和包仍是待人工验收的候选。
 
 ## 仍需人工/真实服务验收
 
