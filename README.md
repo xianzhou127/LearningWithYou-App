@@ -4,6 +4,41 @@
 
 本仓库从主项目的 **0.16.4 实际工作区**独立整理，包含当时未提交的配置列表和窗口交互代码。原项目最近人工验收版本是 T15 / 0.15.10；此独立工程仍待人工验收。拆分没有更换 UI、提示词或模型策略。详见 [验证状态](docs/VALIDATION.md) 和 [来源说明](docs/PROVENANCE.md)。
 
+## Windows 安装包：0.16.17 候选版
+
+安装包封装自原始主项目目录 `release/2026-09-30T10-51-17-026Z/LearningWithYou-T16-win32-x64`，保留原程序文件和 0.16.17 版本号。它是 **T16 待验收候选版**，最近已人工验收版本仍为 T15 / 0.15.10。GitHub 的 LearningWithYou-App 源码来自另行拆分的 0.16.4 工程；该安装包不代表仓库源码已同步升级至 0.16.17。
+
+### 下载和安装
+
+1. 打开 [0.16.17 Windows 候选版发布页](https://github.com/xianzhou127/LearningWithYou-App/releases/tag/v0.16.17-windows-preview)，从 **Assets** 下载 `LearningWithYou-0.16.17-windows-x64-setup.exe`；`Source code (zip)` 是源码，不是安装器。
+2. 退出正在运行的 LearningWithYou 旧版。双击安装器，按向导选择目录并安装；`Next` 为下一步，`Install` 为安装，`Finish` 为完成。默认安装到 `%LOCALAPPDATA%\Programs\LearningWithYou`，仅供当前 Windows 用户使用，无需管理员权限；可选创建桌面快捷方式。
+3. 从开始菜单打开 **LearningWithYou**。安装后无需 Node.js、pnpm、开发服务器或外部浏览器；程序所需 Electron 和原生运行文件已包含。
+
+适用平台为 **Windows x64，Windows 10 2004（内部版本 19041）或更新版本**；建议在 Windows 11 上使用。这个版本没有 ARM64、macOS 或 Linux 安装包。预留约 1 GiB 可用空间，并准备麦克风、可用网络及自己的服务密钥。安装包未做代码签名；如遇 Windows 信誉提示，先核对下载来源与发布页 `SHA256SUMS.txt`，不要关闭系统安全防护。可在 PowerShell 校验下载文件：
+
+```powershell
+# Compute the downloaded installer hash and compare it with SHA256SUMS.txt.
+Get-FileHash "$env:USERPROFILE\Downloads\LearningWithYou-0.16.17-windows-x64-setup.exe" -Algorithm SHA256
+```
+
+### 首次配置与日常使用
+
+1. **配置分析。** 胶囊“更多”→“设置”→分析栏“添加”，填写 API Base URL、支持图片的模型名称及该服务的 Key。地址填写服务前缀（例如百炼 `https://dashscope.aliyuncs.com/compatible-mode/v1`），不包含 `/chat/completions`；应用不会自动补 `/v1`。无鉴权的本地服务 Key 可留空。保存后选中该条目，可主动点击“测试分析连接”。
+2. **配置语音。** ASR 栏“添加”→“阿里云百炼（北京）”→填入有语音权限的 Key 并保存。两栏独立配置；分析测试成功不代表语音权限可用。桌面安装包不会读取项目 `.env.local`。
+3. **选择资料并开始。** 打开文档，从胶囊菜单“选择资料”选中窗口，保持资料可见；点击“开始”，确认录音状态和计时后，用自己的话解释。开始时取得第一张截图，音频发送给所选 ASR 服务。
+4. **结束并检查。** 说完后点击“结束并检查”，应用停止录音、取得第二张截图、等待最终转写，再把两张截图与最终转写发送给所选分析服务。反馈就绪后点击“查看反馈”；“本轮详情”可以核对截图、录音与转写。
+5. **继续和回顾。** 开始下一段会复用当前资料；菜单可更换资料或打开“历史回顾”。分析失败且材料完整时可主动重试。完成学习后从托盘退出；隐藏窗口不会停止录音。
+
+本地分析仍配合云端 ASR，需要联网，服务请求可能计费。玻璃背景画面只用于本机显示。历史和录音存储在 `%APPDATA%\LearningWithYou T11\history-v1`；加密配置位于同级 `secure-config`，新旧版共用该数据目录，避免同时运行。语音结束失败、归档失败及真实跨屏/负载问题的历史记录仍保留；本次制作安装器不代表完整学习流程通过新一轮人工验收。
+
+### 更新、卸载与常见问题
+
+- **更新/卸载：** 先从托盘退出应用，再运行新版安装器；在 Windows“设置→应用→已安装的应用”中卸载 LearningWithYou。卸载只移除程序和快捷方式，保留配置与学习历史；需要清理历史时使用应用内的历史删除功能。
+- **无法开始：** 核对分析、ASR 两栏均已选择配置、资料窗口有效，且 Windows 允许桌面应用访问麦克风。
+- **本地分析连接失败：** 先自行启动 Ollama、LM Studio 或其他兼容服务，核对端口、`/v1` 路径及视觉模型名；应用不会安装或启动模型。
+- **截图空白或玻璃卡顿：** 保持资料窗口可见，在“本轮详情”核对两张截图；可右键胶囊进入外观调参关闭玻璃材质。受保护文档、混合显卡、自由拖动及跨屏仍有已知限制。
+- **保存或退出失败：** 检查磁盘空间及数据目录权限，待写入完成再退出，避免强制结束进程。
+
 ## 界面
 
 以下是独立 Windows 包的真实界面截图；内容由测试生成，不是用户资料或真实模型反馈。
@@ -44,7 +79,7 @@
 - 可工作的图形桌面及 WebGL2。界面字体为 Windows Segoe UI / 微软雅黑，MathML 使用 Cambria Math；这些是系统字体，不随源码重新分发。中文或公式缺字时检查系统字体组件。
 - 首次安装需要联网下载 npm 依赖及 Electron。不要禁用依赖脚本；允许构建的包在 `pnpm-workspace.yaml` 中列明。
 
-仓库为 Private，需要具有访问权限的 GitHub 账号；首次 clone 按 Git 提示完成认证。
+仓库目前公开可读；从源码开发可按下列命令克隆。仅安装使用请下载上方 Windows 安装包。
 
 ```powershell
 git clone https://github.com/xianzhou127/LearningWithYou-App.git
@@ -77,7 +112,7 @@ pnpm test:glass
 pnpm test:appearance
 ```
 
-`release/latest.json` 指向本次带时间戳的包。双击其中的 `LearningWithYou-App.exe`，必须保留整个便携目录。最终包包含 Electron、原生工具、sharp/ws、玻璃预设、渲染代码和第三方许可证；无需 Node、原项目或其依赖目录。当前不生成安装器、不签名、不自动更新；Windows 可能显示未签名应用提示。
+`release/latest.json` 指向本次带时间戳的包。双击其中的 `LearningWithYou-App.exe`，必须保留整个便携目录。最终包包含 Electron、原生工具、sharp/ws、玻璃预设、渲染代码和第三方许可证；无需 Node、原项目或其依赖目录。上述源码打包命令生成便携目录；本仓库另外在 Releases 分发前述主项目 0.16.17 安装器，两者版本和来源不同。当前均未签名、不自动更新；Windows 可能显示未签名应用提示。
 
 所有自动检查使用合成内容、临时 userData 和本地 mock；不会调用真实模型或麦克风。窗口检查需要已登录且未锁屏的 Windows 桌面，会短暂显示测试窗口。GPU 检查用生成的像素和视频，不能替代真实屏幕捕获验收。
 
